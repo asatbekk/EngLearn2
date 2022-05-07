@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
+
+    <title>main page</title>
+
+    <style>
+
+        hr {
+            background-color: white;
+        }
+
+        .nav-link{
+            color: white !important;
+        }
+
+        #footer {
+            padding-top: 3%;
+            color:white;
+            background-color: #524EB7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .accounts img {
+            width: 20%;
+        }
+        .accounts {
+            width: 15%;
+        }
+
+        .actions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .actions button {
+            background-color:transparent;
+            color : white;
+            border: none;
+        }
+
+        td, tr{
+            border: 1px solid black;
+        }
+
+        hr {
+            margin: 10%;
+        }
+
+        .footer-body {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .website img {
+            width:20%;
+        }
+        .website a {
+            display: flex;
+            color: white;
+        }
+
+        .company {
+            width: 20%;
+        }
+
+        .copyright {
+            margin-top: 3%;
+            margin-bottom: 2%;
+        }
+    </style>
+</head>
+<body >
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #524EB7; position:fixed; top: 0; width: 100%" >
+    <div class="container-fluid">
+        <a class="navbar-brand" href="EngLearn">Englearn</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="EngLearn">Home</a>
+                </li>
+                <li class="nav-item dropdown" >
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Lecture
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="vocabulary">Vocabulary</a></li>
+                        <li><a class="dropdown-item" href="quizes">Quizes</a></li>
+                        <li><a class="dropdown-item" href="Grammar">Grammar</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+            <ul class="d-flex navbar navbar-nav">
+                <li class="nav-item me-4">
+                    <a class="nav-link active" aria-current="page" href="registration">
+                        <i class="fa fa-address-book me-1"></i>
+                        Sign Up
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="registration">
+                        Contacts
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br><br>
+<br>
+<!-- Header Start -->
+<div style="background-color: #524EB7;" class="container-fluid  px-0 px-md-5 mb-5">
+    <div class="row align-items-center px-3">
+        <div class="col-lg-6 text-center text-lg-left">
+            <h2 class="text-white mb-4 mt-5 mt-lg-0">EngLearn</h2>
+            <h1 class="display-3 font-weight-bold text-white">Grammar</h1>
+            <p class="text-white mb-4">You have to learn the grammar and skip to the quiz part to keep up with your knowledge
+                Learn beginner's grammar here.</p>
+            <a href="" class="btn btn-secondary mt-1 py-3 px-5">Learn More</a>
+        </div>
+        <div class="col-lg-6 text-center text-lg-right">
+            <a href=""><img src="/static/img/header.png" style="width: 250px;height: 250px;"></a>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+<!-- Facilities Start -->
+<div class="container-fluid pt-5">
+    <div class="container pb-3">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 pb-1">
+                <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                    <i class="flaticon-050-fence h1 font-weight-normal text-primary mb-3"></i>
+                    <div class="pl-4">
+                        <h4>Pronoun</h4>
+                        <p class="m-0">A pronoun is a word that replaces a noun. The pronoun does not name an object or person, it just refers to it. There are several features of English pronouns</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 pb-1">
+                <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                    <i class="flaticon-022-drum h1 font-weight-normal text-primary mb-3"></i>
+                    <div class="pl-4">
+                        <h4>Article</h4>
+                        <p class="m-0">The indefinite article a/an is used only with numbered nouns in the singular: a girl, a pen. If a word begins with a consonant, we write the article a (a girl) and if the word begins with a vowel, we put the article an (an apple).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 pb-1">
+                <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                    <i class="flaticon-030-crayons h1 font-weight-normal text-primary mb-3"></i>
+                    <div class="pl-4">
+                        <h4>The verb to be</h4>
+                        <p class="m-0">There is always a verb in an English sentence. And while in Russian we can say "I am a doctor", "Mary is beautiful", "We are in the hospital", in English this is not allowed: in all these cases there must be a verb to be after the subject. So you can remember a simple rule: if there are no regular verbs in a sentence, then you need the verb to be.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 pb-1">
+                <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                    <i class="flaticon-017-toy-car h1 font-weight-normal text-primary mb-3"></i>
+                    <div class="pl-4">
+                        <h4>Present continuous</h4>
+                        <p class="m-0">The Present Continuous Tense most often shows that the action is happening at the moment.
+
+                            Every English sentence has a subject and a predicate. In Present Continuous, the predicate consists of an auxiliary verb to be in the correct form (am, is, are) and a main verb without the particle to, to which we add the ending -ing (playing, reading).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 pb-1">
+                <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                    <i class="flaticon-025-sandwich h1 font-weight-normal text-primary mb-3"></i>
+                    <div class="pl-4">
+                        <h4>Present Perfect</h4>
+                        <p class="m-0">For example, I really love the old American musical Singing in the Rain. The title of the musical matches the first line of the song - Singing in the rain. And when you need to translate the phrase "in the rain" from Russian to English, your brain finds the right version in the rain itself, because the melody of the song sits firmly in it. And you know for sure that in the rain is not under the rain, not at the rain, but in the rain.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 pb-1">
+                <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                    <i class="flaticon-047-backpack h1 font-weight-normal text-primary mb-3"></i>
+                    <div class="pl-4">
+                        <h4>Past Simple</h4>
+                        <p class="m-0">To form Past Simple, we add the ending -ed to the verb, if the verb is regular (work - worked, learn - learned, ask - asked). If the verb is irregular, we look for the form for Past Simple in the second column of the irregular verb table. If you start with an irregular verb, you may have trouble telling which verb is right in front of you. You will find the wrong verb in the table. If it is not there, it is correct.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+    </div>
+
+</div>
+<!-- Facilities Start -->
+
+    <!-- Class Start -->
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="text-center pb-2">
+                <p class="section-title px-5"><span class="px-2">Popular Classes</span></p>
+                <h1 class="mb-4">Classes for your </h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-5">
+                    <div class="card border-0 bg-light shadow-sm pb-2">
+                        <img class="card-img-top mb-2" src="img/class-1.jpg" alt="">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Speaking Class</h4>
+                            <p class="card-text"></p>
+                        </div>
+                        <div class="card-footer bg-transparent py-4 px-5">
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><strong>Age </strong></div>
+                                <div class="col-6 py-1">6-18 Years</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><strong>Total Seats</strong></div>
+                                <div class="col-6 py-1">40 Seats</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><strong>Class Time</strong></div>
+                                <div class="col-6 py-1">08:00 - 10:00</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 py-1 text-right border-right"><strong>Tution Fee</strong></div>
+                                <div class="col-6 py-1">30000tenge / Month</div>
+                            </div>
+                        </div>
+                        <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="card border-0 bg-light shadow-sm pb-2">
+                        <img class="card-img-top mb-2" src="img/class-2.jpg" alt="">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Grammar Learning</h4>
+                            <p class="card-text"></p>
+                        </div>
+                        <div class="card-footer bg-transparent py-4 px-5">
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><strong>Age of Kids</strong></div>
+                                <div class="col-6 py-1">6-18 Years</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><strong>Total Seats</strong></div>
+                                <div class="col-6 py-1">25 Seats</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><strong>Class Time</strong></div>
+                                <div class="col-6 py-1">11:00 - 13:00</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 py-1 text-right border-right"><strong>Tution Fee</strong></div>
+                                <div class="col-6 py-1">25000tenge / Month</div>
+                            </div>
+                        </div>
+                        <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="card border-0 bg-light shadow-sm pb-2">
+                        <img class="card-img-top mb-2" src="img/class-3.jpg" alt="">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Basic English</h4>
+                            <p class="card-text"></p>
+                        </div>
+                        <div class="card-footer bg-transparent py-4 px-5">
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><strong>Age of Kids</strong></div>
+                                <div class="col-6 py-1">6-18 Years</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><strong>Total Seats</strong></div>
+                                <div class="col-6 py-1">40 Seats</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><strong>Class Time</strong></div>
+                                <div class="col-6 py-1">15:00 - 18:00</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 py-1 text-right border-right"><strong>Tution Fee</strong></div>
+                                <div class="col-6 py-1">45000tenge / Month</div>
+                            </div>
+                        </div>
+                        <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Class End -->
+
+
+
+
+    <div id="footer" >
+    <div class="footer-body">
+        <div class="company">
+            <div class="unversity">
+                Astana IT University
+            </div>
+            <div class="group">
+                SE - 2102
+            </div>
+        </div>
+        <div class="creators">
+            <h4 class="lng-creators">Creators</h4>
+            <div>Asatbek Khairullarv</div>
+            <div>Damir Kapezov</div>
+        </div>
+        <div class="actions">
+            <div class="contact">
+                <button class="lng-bcontact">Contact us</button>
+                <hr>
+            </div>
+            <div class="join">
+                <button class="lng-bjoin">Join us</button>
+                <hr>
+            </div>
+        </div>
+        <div class="accounts">
+            <a href=""><img src="public/img/instagram (1).png" alt=""></a>
+            <a href=""><img src="public/img/facebook.png" alt=""></a>
+            <a href=""><img src="public/img/twitter.png" alt=""></a>
+        </div>
+
+    </div>
+    <div class="copyright">
+        SE - 2102
+    </div>
+</div>
+
+
+</body>
+</html>
