@@ -1,11 +1,17 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 5000;
 const fs = require('fs')
 const path = require('path')
+const cool = require('cool-ascii-faces')
 
 app.use('/static', express.static(__dirname+'/public'))
 
+
+express()
+    .use(express.static(path.join(__dirname, 'public')))
+    .get('/cool', (req, res) => res.send(cool()))
+    .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 app.get('/vocabulary',(req, res) => {
     res.sendFile(__dirname+'/vocabulary.html')
@@ -35,7 +41,5 @@ app.get('/Grammar',(req, res) => {
 
 
 
-app.listen(port, () =>
-    console.log(`App listening at http://localhost:${port}`)
-);
+
 
