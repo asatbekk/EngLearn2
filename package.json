@@ -16,6 +16,7 @@
     "express": "^4.17.3",
     "fs": "^0.0.1-security",
     "http": "^0.0.1-security",
+    "mongodb": "^4.5.0",
     "mongoose": "^6.3.2",
     "node-base64-image": "^2.0.4",
     "nodemailer": "^6.7.3",

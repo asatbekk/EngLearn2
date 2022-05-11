@@ -4,6 +4,10 @@ const PORT = process.env.PORT || 5000;
 const fs = require('fs')
 const path = require('path')
 const cool = require('cool-ascii-faces')
+const mongodb = require('mongodb')
+const mongoClient = new mongodb.MongoClient('mongodb://localhost:5000', {
+    useUnifiedTopology: true
+});
 
 app.use('/static', express.static(__dirname+'/public'))
 app .get('/cool', (req, res) => res.send(cool()))
