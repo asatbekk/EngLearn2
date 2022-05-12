@@ -5,6 +5,11 @@ const fs = require('fs')
 const path = require('path')
 const cool = require('cool-ascii-faces')
 const mongodb = require('mongodb')
+const {MongoClient} = require('mongodb')
+
+const client = new MongoClient('mongodb+srv://asat2003080808:asat2003080808@cluster0.yt7bp.mongodb.net/Engliear202020?retryWrites=true&w=majority')
+
+
 const mongoClient = new mongodb.MongoClient('mongodb://localhost:5000', {
     useUnifiedTopology: true
 });
@@ -39,6 +44,26 @@ app.get('/Grammar',(req, res) => {
     res.sendFile(__dirname+'/Grammar.html')
 })
 
+
+
+const start = async () => {
+    try {
+        await client.connect()
+        const db = client.db('users')
+        const coll = db.collection('userdata')
+
+
+        res = await coll.insertOne({name:""})
+
+        app.listen(PORT, () => console.log('Server start ') )
+        console.log(res)
+    }
+    catch (e) {
+        console.log(e)
+    }
+}
+
+start()
 
 
 

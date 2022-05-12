@@ -4,29 +4,14 @@
     <meta charset="UTF-8">
     <title>Quizes</title>
   <link rel="stylesheet" href="quiz.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
-        <script src="https://api-maps.yandex.ru/2.1/?apikey=58633216-6b08-4a0d-ba81-a779d885a6c8&lang=ru_RU" type="text/javascript">
-        </script>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript">
 
-        // Функция ymaps.ready() будет вызвана, когда
-        // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-        ymaps.ready(init);
-        function init(){
-            // Создание карты.
-            var myMap = new ymaps.Map("map", {
-                // Координаты центра карты.
-                // Порядок по умолчанию: «широта, долгота».
-                // Чтобы не определять координаты центра карты вручную,
-                // воспользуйтесь инструментом Определение координат.
-                center: [51, 70],
-                // Уровень масштабирования. Допустимые значения:
-                // от 0 (весь мир) до 19.
-                zoom: 16
-            });
-        }
-    </script>
 
     <style>
         *{
@@ -36,7 +21,7 @@
             background-color: #87CEFA;
             border-radius: 10px;
             box-shadow: 0 0 10px 2px rgba(100,100,100,0.1) ;
-            width: 600px;
+            width: 100%;
             overflow: hidden ;
         }
         .quiz-header{
@@ -82,8 +67,192 @@
         }
     </style>
 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+        hr {
+
+        }
+
+        .nav-link{
+            color: white !important;
+        }
+
+        #footer {
+            padding-top: 3%;
+            color:white;
+            background-color: #524EB7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .accounts img {
+            width: 20%;
+        }
+        .accounts {
+            width: 15%;
+        }
+
+        .actions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .actions button {
+            background-color:transparent;
+            color : white;
+            border: none;
+        }
+
+
+
+        .footer-body {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .website img {
+            width:20%;
+        }
+        .website a {
+            display: flex;
+            color: white;
+        }
+
+        .company {
+            width: 20%;
+        }
+
+        .copyright {
+            margin-top: 3%;
+            margin-bottom: 2%;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+        .header h1 {
+            font-size: 40px;
+        }
+
+        blockquote {
+            margin: 0;
+            color: #231E28;
+            padding: 30px 30px 30px 60px;
+            border-left: 8px solid #CBDDE7;
+            position: relative;
+            background: #FAF8EB;
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+        }
+        blockquote:before{
+            content: "\201C";
+            font-family: Arial;
+            color: #CBDDE7;
+            font-size: 70px;
+            position: absolute;
+            left: 15px;
+            top: 5px;
+        }
+        blockquote p {
+            font-style: italic;
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        section {
+            width: 100%;
+            display: inline-block;
+            background: #ccc;
+            height: 60vh;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+        .our_partners_img{
+            width: 200px;
+            height: 100px;
+            background-size: 100%;
+        }
+        .main_text_row{
+
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Ubuntu', sans-serif;
+            padding: 0 200px;
+        }
+        .main_text_row div{
+            margin: 50px 0;
+        }
+
+
+    </style>
+
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light  fixed-top" style="background-color: #524EB7;" >
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Englearn</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="EngLearn">Home</a>
+                </li>
+                <li class="nav-item dropdown" >
+                    <a class="nav-link dropdown-toggle" href="lecture" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Lecture
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="vocabulary">Vocabulary</a></li>
+                        <li><a class="dropdown-item" href="quizes">Quizes</a></li>
+                        <li><a class="dropdown-item" href="Grammar">Grammar</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="contact">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+            <ul class="d-flex navbar navbar-nav">
+                <li class="nav-item me-4">
+                    <a class="nav-link active" aria-current="page" href="registration">
+                        <i class="fa fa-address-book me-1"></i>
+                        Sign Up
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        Contacts
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
 <div class="container">
     <div id="question-container" class="hide">
         <div id="question">Question</div>
@@ -99,11 +268,49 @@
         <button id="next-btn" class="next-btn btn hide">Next</button>
     </div>
 </div>
-<div id="map" style="width: 600px; height: 400px"></div>
+
+<div id="footer" style="margin-top: 500px;" >
+    <div class="footer-body">
+        <div class="company">
+            <div class="unversity">
+                Astana IT University
+            </div>
+            <div class="group">
+                SE - 2102
+            </div>
+        </div>
+        <div class="creators">
+            <h4 class="lng-creators">Creators</h4>
+            <div>Asatbek Khairullarv</div>
+            <div>Damir Kapezov</div>
+        </div>
+        <div class="actions">
+            <div class="contact">
+                <button class="lng-bcontact">Contact us</button>
+                <hr>
+            </div>
+            <div class="join">
+                <button class="lng-bjoin">Join us</button>
+                <hr>
+            </div>
+        </div>
+        <div class="accounts">
+            <a href=""><img src="/static/img/instagram (1).png" alt=""></a>
+            <a href=""><img src="/static/img/facebook.png" alt=""></a>
+            <a href=""><img src="/static/img/twitter.png" alt=""></a>
+        </div>
+
+    </div>
+    <div class="copyright">
+        SE - 2102
+    </div>
+</div>
+
+
 <style>
     *, *::before, *::after {
         box-sizing: border-box;
-        font-family: Gotham Rounded;
+
     }
 
     :root {
@@ -114,12 +321,14 @@
 
 
     .container {
-        width: 800px;
-        max-width: 80%;
+        width: 100%;
+        max-width: 100%;
         background-color: white;
         border-radius: 5px;
         padding: 10px;
         box-shadow: 0 0 10px 2px;
+        height: 100%;
+        margin-top: 200px;
     }
 
     .btn-grid {
@@ -168,6 +377,10 @@
         display: none;
     }
 </style>
+
+
+
+
 <script>
     const startButton = document.getElementById('start-btn')
     const nextButton = document.getElementById('next-btn')
