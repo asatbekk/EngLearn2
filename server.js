@@ -53,9 +53,9 @@ const start = async () => {
         const coll = db.collection('userdata')
 
 
-        res = await coll.insertOne({name:""})
+        res = await coll.insertOne({name:"Asatbekk"})
 
-        app.listen(PORT, () => console.log('Server start ') )
+        app.listen(PORT, () => console.log('Server works ') )
         console.log(res)
     }
     catch (e) {
