@@ -15,9 +15,8 @@ const mongoClient = new mongodb.MongoClient('mongodb://localhost:5000', {
 });
 
 app.use('/static', express.static(__dirname+'/public'))
-app .get('/cool', (req, res) => res.send(cool()))
 
-app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
 
 app.get('/vocabulary',(req, res) => {
     res.sendFile(__dirname+'/vocabulary.html')
