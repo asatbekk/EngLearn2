@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express()
+const bcrypt = require('bcrypt')
 const mongoose = require('mongoose');
 const bodyparser = require('body-parser');
 app.use(bodyparser.urlencoded({extended:true}))
@@ -51,13 +52,27 @@ app.post('/',(req,res)=>{
         password:req.body.password,
     })
     if(req.body.password === req.body.password) {
-        newUser.save((err) => {
-            if (err) {
-                console.log(err)
-            } else {
-                console.log("Ok")
-            }
-        })
+        bcrypt.genSalt(10,(err,salt)=>{
+            bcrypt.hash(newUser.password,salt,(err,hash)=>{
+                if(err){
+                    throw err;
+                }
+                else{
+
+                    newUser.password = hash;
+
+                    newUser.save((err)=>{
+                        if(err){
+                            console.log(err);
+                        }
+                        else{
+                            res.redirect('/login');
+                            console.log('Excellent');
+                        }
+                    })
+                }
+            });
+        });
         res.json({msg:"user saved"})
     }
     else{
