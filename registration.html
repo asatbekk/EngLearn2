@@ -23,18 +23,18 @@
       <!----Incorrect Username or Password---->
     </div>
     <div class = "formInputGroup">
-      <input type = "text" class = "formInput" autofocus placeholder="Username or Email">
+      <input type = "text" class = "formInput"   autofocus placeholder="Username or Email">
       <div class = "formInputMessageError"></div>
     </div>
     <div class = "formInputGroup">
-      <input id="pass3" type = "password" class = "formInput" autofocus placeholder="Password">
+      <input id="pass3"  type = "password" class = "formInput" autofocus placeholder="Password">
       <div class = "formInputMessageError"></div>
     </div>
     <div class="reg-btn">
       <a id="gg" class = "fontButton" href = "EngLearn">Continue</a>
     </div>
     <p class = "formText">
-      <a href = "#" class = "formLink">
+      <a href = "EngLearn" class = "formLink">
         Forgot your password?
       </a>
     </p>
@@ -44,7 +44,7 @@
       </a>
     </p>
   </form>
-  <form class = "form" id = "createAccount">
+  <form class = "form" id = "createAccount" method="post">
     <h1 class = "formTitle">
       Create Account
       <i class="far fa-user"></i>
@@ -58,19 +58,20 @@
       <div class = "formInputMessageError"></div>
     </div>
     <div class = "formInputGroup">
-      <input type = "text" class = "formInput" autofocus placeholder="Email Address">
+      <input type = "text" name="email" class = "formInput" autofocus placeholder="Email Address">
       <div class = "formInputMessageError"></div>
     </div>
     <div class = "formInputGroup">
-      <input id="pass1" type = "password" class = "formInput" autofocus placeholder="Password">
+      <input id="pass1"  name="password" type = "password" class = "formInput" autofocus placeholder="Password">
       <div class = "formInputMessageError"></div>
     </div>
     <div class = "formInputGroup">
-      <input id="pass2" type = "password" class = "formInput" autofocus placeholder="Confirm Password">
+      <input id="pass2" name="passwordr"type = "password" class = "formInput" autofocus placeholder="Confirm Password">
       <div class = "formInputMessageError"></div>
     </div>
     <div class="reg-btn">
-      <a id="ww" class = "fontButton" href = "EngLearn">Continue</a>
+      <!--      <a id="ww" class = "fontButton"  href = "EngLearn">Continue</a>-->
+      <button type="submit" formmethod="post"></button>
     </div>
     <p class = "formText"><br>
       <a class = "formLink" id = "linkLogin">
@@ -176,7 +177,7 @@
     padding: 1rem 2rem;
     font-weight: bold;
     font-size: 1.2rem;
-    color: #524EB7;
+    color: #0d6efd;
     border: none;
     border-radius: var(--border-radius);
     outline: none;
@@ -240,7 +241,7 @@
     if(document.getElementById("pass1").value.match(passw))
     {
       if(text1.value == text2.value){
-        location.href="car.html"
+        location.href="EngLearn"
       }
       else{
         alert("Passwords do not match");
@@ -256,7 +257,7 @@
     var passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,100}$/;
     if(document.getElementById("pass3").value.match(passw))
     {
-      location.href="car.html"
+      location.href="EngLearn"
     }
     else
     {
