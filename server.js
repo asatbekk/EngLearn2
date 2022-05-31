@@ -33,9 +33,6 @@ app.get('/contact',(req, res) => {
 app.get('/lecture',(req, res) => {
     res.sendFile(__dirname+'/lecture.html')
 })
-app.get('/registration',(req, res) => {
-    res.sendFile(__dirname+'/registration.html')
-})
 app.get('/grammar',(req, res) => {
     res.sendFile(__dirname+'/Grammar.html')
 })
