@@ -17,6 +17,10 @@ mongoose.connect("mongodb+srv://asatbekkkk:asat20030808@cluster0.povlf.mongodb.n
     }
 })
 
+
+
+
+
 app.use('/static', express.static(__dirname+'/public'))
 
 
