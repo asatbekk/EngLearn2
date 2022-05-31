@@ -1,8 +1,8 @@
-const express = require("express");
+const express = require("express")
 const app = express()
 const bcrypt = require('bcrypt')
-const mongoose = require('mongoose');
-const bodyparser = require('body-parser');
+const mongoose = require('mongoose')
+const bodyparser = require('body-parser')
 app.use(bodyparser.urlencoded({extended:true}))
 const port = 3000;
 const user = require ("./model/user")
