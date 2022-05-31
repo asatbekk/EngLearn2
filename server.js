@@ -6,7 +6,14 @@ const bodyparser = require('body-parser')
 app.use(bodyparser.urlencoded({extended:true}))
 const port = 3000;
 const user = require ("./model/user")
-
+mongoose.connect("mongodb+srv://asatbekkkk:asat20030808@cluster0.povlf.mongodb.net/ENGLEARN20",(err)=>{
+    if(err){
+        console.log(err)
+    }
+    else{
+        console.log('connected');
+    }
+})
 
 
 
@@ -32,6 +39,9 @@ app.get('/contact',(req, res) => {
 })
 app.get('/lecture',(req, res) => {
     res.sendFile(__dirname+'/lecture.html')
+})
+app.get('/registration',(req, res) => {
+    res.sendFile(__dirname+'/registration.html')
 })
 app.get('/grammar',(req, res) => {
     res.sendFile(__dirname+'/Grammar.html')
