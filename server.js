@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt')
 const mongoose = require('mongoose')
 const bodyparser = require('body-parser')
 app.use(bodyparser.urlencoded({extended:true}))
-const port = 3000;
+const port = process.env.PORT || 3000
 const user = require ("./model/user")
 mongoose.connect("mongodb+srv://asatbekkkk:asat20030808@cluster0.povlf.mongodb.net/ENGLEARN20",(err)=>{
     if(err){
