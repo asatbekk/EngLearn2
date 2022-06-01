@@ -14,6 +14,19 @@ mongoose.connect("mongodb+srv://asatbekkkk:asat20030808@cluster0.povlf.mongodb.n
         console.log('connected');
     }
 })
+const AdminBro = require('admin-bro')
+const expressAdminBro = require('@admin-bro/express')
+const mongooseAdminBro = require('@admin-bro/mongoose')
+
+
+AdminBro.registerAdapter(mongooseAdminBro)
+const AdminBroOptions = {resources:[user] }
+
+const adminBro = new AdminBro(AdminBroOptions)
+
+
+const router = expressAdminBro.buildRouter(adminBro)
+app.use(adminBro.options.rootPath, router)
 
 
 
