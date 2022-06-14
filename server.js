@@ -87,7 +87,7 @@ app.post('/',(req,res)=>{
                     })
                 }
             });
-        });
+        })
         res.json({msg:"user saved"})
     }
     else{
